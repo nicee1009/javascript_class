@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>carousel slide 실습</title>
+  <style>
+    .slide-wrap *{margin:0px; padding:0px;}
+    ul, ol, li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+      position: absolute;
+      top:50%;
+      background-color: rgba(0,0,0,.5);
+      color: #fff;
+    }
+    h2{
+      text-align: center;
+    }
+    .slide-wrap{
+      width:100%;
+      margin:0px auto;
+      border:3px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide{
+      width:300%;
+      display: flex;
+      position:relative;
+      left: 0px;
+    }
+    .slide>li>img{
+      width:100%;
+      display: block;
+    }
+    .slide>li:first-child>div{
+      background-color: rgb(184, 168, 255);
+    }
+    .slide>li:nth-child(2)>div{
+      background-color: rgb(201, 188, 255);
+    }
+    .slide>li:last-child>div{
+      background-color: rgb(226, 218, 252);
+    }
+    .slide-wrap a:first-of-type{
+      left: 0%;
+      padding:10px;
+      border-top-left-radius : 20px;
+      border-bottom-left-radius : 20px;
+    }
+    .slide-wrap a:last-of-type{
+      right: 0%;
+      padding:10px;
+      border-top-right-radius : 20px;
+      border-bottom-right-radius : 20px
+    }
+  </style>
+  <script src="./script/exec01.js" defer></script>
+</head>
+<body>
+  <h2>carousel slide 실습</h2>
+  <article class="slide-wrap">
+    <ul class="slide">
+      <li>
+        <img src="./images/slide_banner01.jpg" alt="슬라이드배너1">
+      </li>
+      <li>
+        <img src="./images/slide_banner02.jpg" alt="슬라이드배너2">
+      </li>
+      <li>
+        <img src="./images/slide_banner03.jpg" alt="슬라이드배너3">
+      </li>
+    </ul>
+    <a href="javascript:void(0);" title="이전" id="prev_btn">이전</a>
+    <a href="javascript:;" title="다음" id="next_btn">다음</a>
+  </article>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스티브잡스</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    .imgbox{
+      margin: 0px auto;
+      width: 500px;
+      height: 275px;
+      border:3px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .imgbox img{
+      vertical-align: bottom;
+    }
+    #img01{
+      position: absolute;
+      left: -134px;
+      top: 100px;
+    }
+    #img02{
+      position: absolute;
+      right: 0px;
+      bottom: -278px;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 제이쿼리 easing UI라이브러리 -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function(){
+        $('#img01').animate({'left':'10px'}),500,'easeOutQuint';
+        $('#img02').animate({'bottom':'0px'}),500,'easeOutQuint';
+      });
+    </script>
+
+</head>
+<body>
+  <div class="imgbox">
+    <img src="./images/jobs_text.gif" alt="Steve Jobs" id="img01">
+    <img src="./images/jobs.png" alt="Jobs photo" id="img02">
+  </div>
+</body>
+</html>

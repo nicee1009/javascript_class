@@ -1,0 +1,83 @@
+@charset "utf-8";
+*{
+  margin:0px;
+  padding:0px;
+}
+.product{
+  position:relative;
+}
+.photo{
+  position:absolute;
+  left: 0px;
+}
+.product>.photo>.thum{
+  display: flex;
+}
+.product>.photo>.thum li{
+  list-style: none;
+}
+.product>.photo>.thum li>img{
+  width: 80px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-sizing:border-box;
+}
+#small_img01{
+  border: 2px solid rgb(117, 0, 133);
+  border-radius: 5px;
+}
+.info{
+  position:absolute;
+  left: 600px;
+}
+.today{
+  color:red;
+  font-size: 16px;
+}
+.info>p{
+  margin-bottom: 10px;
+}
+hr{
+  margin-top: 25px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+.pname{
+  margin-top: 25px;
+  color:rgb(29, 29, 29);
+}
+.price{
+  font-size: 25px;
+  padding:20px 0px 5px 0px;
+  color:rgb(29, 29, 29);
+}
+.discount{
+  font-size: 50px;
+  color:red;
+}
+.discount2{
+  color:red;
+}
+.price2{
+  font-size: 50px;
+}
+.membership{
+  font-size: 16px;
+  color:rgb(119, 119, 119);
+  border: 2px solid rgb(119, 119, 119);
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+.membership2{
+  margin-top: 20px;
+  font-size: 15px;
+  background-color: rgba(212, 212, 212,.5);
+  padding:10px 10px;
+  position: relative;
+}
+.membership3, .membership4{
+  color: rgb(146, 146, 146);
+}

@@ -1,0 +1,136 @@
+@charset "utf-8";
+*{
+  margin:0px;
+  padding:0px;
+}
+.movi{
+  width: 1200px;
+  margin: 0px auto;
+}
+.info{
+  margin: 20px 0px;
+  display: flex;
+  position:relative;
+}
+.info>p a{
+  text-decoration: none;
+  color:#333;
+  font-size: 14px;
+  border: 1px solid #333;
+  padding:3px;
+}
+.info>.txt01{
+  position:absolute;
+  left: 1050px;
+}
+.info>.txt02{
+  position:absolute;
+  left: 1120px;
+}
+span{
+  color:#ccc;
+  margin: 2px 0px 0px 10px;
+}
+article{
+  text-align: center;
+}
+.sub_tab{
+  margin: 10px 0px;
+  display: flex;
+  list-style: none;
+}
+.sub_tab>li{
+  position:relative;
+}
+.sub_tab a{
+  text-decoration: none;
+  color:#333;
+  display: block;
+  padding: 10px;
+}
+.sub_tab li:first-child a{
+  color:rgb(240, 0, 0);
+}
+.sub_tab > li > a::after{
+  width:1px;
+  height: 16px;
+  background-color: #333;
+  content:"";
+  display: block;
+  position:relative;
+  top:-18px;
+  left:85px;
+}
+.sub_tab>li:nth-child(2)>a::after{left:101px;}
+.sub_tab>li:last-child>a::after{display:none;}
+.thum{
+  width: 1140px;
+  margin: 0px auto;
+  overflow: hidden;
+  display: flex;
+  list-style: none;
+  border: 1px solid rgb(134, 134, 134);
+  margin-bottom: 20px;
+  position:relative;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.thum>li{
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.thum>li:first-child:checked{
+  border: 2px solid red;
+}
+.thum>li:hover{
+  border: 2px solid red;
+}
+.thum>li img{
+  width: 75px;
+  height: 75px;
+  box-sizing: border-box;
+}
+#big_img{
+  width: 1000px;
+}
+.fa-caret-left{
+  padding: 22px 12px;
+  font-size: 30px;
+  position: absolute;
+  top:  145px;
+  left: 360px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.fa-caret-right{
+  padding: 22px 12px;
+  font-size: 30px;
+  position: absolute;
+  top:  145px;
+  right: 358px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#faleft{
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  font-size: 60px;
+  padding: 20px 30px;
+  position: absolute;
+  top:  430px;
+  left: 360px;
+  cursor: pointer;
+}
+#faright{
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  font-size: 60px;
+  padding: 20px 30px;
+  position: absolute;
+  top:  430px;
+  right: 360px;
+  cursor: pointer;
+}

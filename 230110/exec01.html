@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제01_스타벅스</title>
+  <link href="./css/exec01.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#img01').delay(100).fadeIn();
+      $('#img08').delay(100).fadeIn();
+      $('#img02').delay(500).fadeIn();
+      $('#img03').delay(500).fadeIn();
+      $('#img04').delay(900).fadeIn();
+      $('#img05').delay(900).fadeIn();
+      $('#img06').delay(1300).fadeIn();
+      $('#img07').delay(1300).fadeIn();
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <article>
+      <h2>스타벅스 예제</h2>
+      <div class="bg_banner">
+      <img src="./exec02/images/bev_bg.jpg" alt="메인배너">
+      </div>
+      <div class="cont_banner">
+      <img src="./exec02/images/m_18_emblem.png" alt="메인배너텍스트" id="img01">
+      <img src="./exec02/images/bev1_cup.png" alt="음료1" id="img02">
+      <img src="./exec02/images/bev1_txt.png" alt="음료설명1" id="img03">
+      <img src="./exec02/images/bev2_cup.png" alt="음료2" id="img04">
+      <img src="./exec02/images/bev1_txt.png" alt="음료설명2" id="img05">
+      <img src="./exec02/images/bev3_cup.png" alt="음료3" id="img06">
+      <img src="./exec02/images/bev3_txt.png" alt="음료설명3" id="img07">
+      </div>
+
+      <a href="#none" title="자세히보기" id="img08">자세히보기</a>
+    </article>
+  </main>
+</body>
+</html>

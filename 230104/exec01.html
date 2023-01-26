@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 문서객체모델_속성값을 활용한 상품 미리보기 콘텐츠</title>
+  <link href="./css/exec01.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h2>자바스크립트 문서객체모델_속성값을 활용한 상품 미리보기 콘텐츠</h2>
+  <p>이미지 5장을 사용하여 썸네일 이미지를 클릭시 큰사진이 보이게 하기 </p>
+
+  <section class="product">
+    <article class="photo">
+      <img src="./images2/photo01.jpg" alt="미리보기" id="big_img">
+      <!--썸네일 클릭시 해당 속성 src값을 변수에 담아서 출력해본다.-->
+      <ul class="thum">
+        <li><img src="./images2/photo01.jpg" alt="썸네일" class="small"></li> 
+        <li><img src="./images2/photo02.jpg" alt="썸네일" class="small"></li>
+        <li><img src="./images2/photo03.jpg" alt="썸네일" class="small"></li>
+        <li><img src="./images2/photo04.jpg" alt="썸네일" class="small"></li>
+        <li><img src="./images2/photo05.jpg" alt="썸네일" class="small"></li>
+      </ul>
+    </article>
+
+    <article class="info">
+      <h3><span class="today">오늘마감</span>
+
+        <hr>
+
+      <p class="pname">[최대 40%쿠폰] 머렐 헤비다운 외 스포츠특가</p>
+      
+      <p class="price"><span class="discount">10</span><span class=discount2>%</span> <span class="price2">151,200</span>원~ <a href="#" title="혜택보기" class="membership">혜택보기</a></p>
+
+      <hr>
+
+      <p class="membership2"><a href="#" tilte="" class="membership3">구매 전 적립금 5,000원 받기</a>&#xFF5C;
+      <a href="#" title="무이자" class="membership4">카드 무이자 혜택보기 (최대 6개월)</a></p>
+    </article>
+
+
+
+    <script>
+    // let bigImg = document.getElementById('big_img');
+    // let img_src = bigImg.getAttribute('src');
+    // console.log(img_src);
+
+    // small_img01.addEventListener('click',function(){
+    // big_img.setAttribute('src','./images2/photo01.jpg');
+    // small_img01.style.border="2px solid purple";
+    // small_img02.style.border="none";
+    // small_img03.style.border="none";
+    // small_img04.style.border="none";
+    // small_img05.style.border="none";
+    // });
+    // small_img02.addEventListener('click',function(){
+    // big_img.setAttribute('src','./images2/photo02.jpg');
+    // small_img01.style.border="none";
+    // small_img02.style.border="2px solid purple";
+    // small_img03.style.border="none";
+    // small_img04.style.border="none";
+    // small_img05.style.border="none";
+    // });
+    // small_img03.addEventListener('click',function(){
+    // big_img.setAttribute('src','./images2/photo03.jpg');
+    // small_img01.style.border="none";
+    // small_img02.style.border="none";
+    // small_img03.style.border="2px solid purple";
+    // small_img04.style.border="none";
+    // small_img05.style.border="none";
+    // });
+    // small_img04.addEventListener('click',function(){
+    // big_img.setAttribute('src','./images2/photo04.jpg');
+    // small_img01.style.border="none";
+    // small_img02.style.border="none";
+    // small_img03.style.border="none";
+    // small_img04.style.border="2px solid purple";
+    // small_img05.style.border="none";
+    // });
+    // small_img05.addEventListener('click',function(){
+    // big_img.setAttribute('src','./images2/photo05.jpg');
+    // small_img01.style.border="none";
+    // small_img02.style.border="none";
+    // small_img03.style.border="none";
+    // small_img04.style.border="none";
+    // small_img05.style.border="2px solid purple";
+    // });
+
+    //선생님
+    //큰사진 변수에 저장
+    let photo = document.querySelector('#big_img');
+
+    //작은사진 변수에 저장
+    let s_img = document.querySelectorAll('.small');
+
+    //반복문을 통해 목록안에 이미지를 개별적으로 선택하여 클릭이벤트를 만든다.
+    for(let i=0;i<s_img.length;i++){
+    //변수선언 i 초기값 0으로
+    //i.small 개수만큼 반복 실행한다.
+    //i++ 1씩 증가
+    console.log(s_img[i]);//출력하여 목록 확인한다.
+    s_img[i].addEventListener('click',changePic);//이미지를 각각 클릭하면 해당함수가 실행된다.
+    }
+    //이미지를 변경하는 함수
+    function changePic(){
+      let newPic = this.src;//사용자가 선택한 이미지 속성을 변수에 저장한다.
+      console.log(newPic);//이미지 src값을 출력확인.
+
+      //src값을 big_img의 src속성값에 대입하여 이미지가 변경되도록 한다.
+      photo.setAttribute('src',newPic);
+
+      for(let j=0;j<s_img.length;j++){
+        s_img[j].style.border='none';//모두 서식을 제거하고
+        this.style.border='1px solid purple';//선택한 썸네일 이미지에 테두리 적용
+    }
+
+    }
+
+    </script>
+  </section>
+</body>
+</html>

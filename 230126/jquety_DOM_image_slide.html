@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquety_DOM_image_slide</title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    ul, li, ol{
+      list-style:none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+    }
+    h2,p{
+      padding:10px;
+    }
+    .banner{
+      width: 1200px;
+      height:122px;
+      margin: 0px auto;
+      border:3px solid #f00;
+    }
+    .banner > ul{
+      display: flex;
+      margin-left: -355px;
+    }
+    .banner > ul > li{
+
+    }
+    .banner img{
+      /* display: block; */
+      vertical-align: top;
+    }
+  </style>
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      let mleft = -355;
+
+      function moveLeft(){
+
+        $('.banner ul').css('margin-left',mleft);/*왼쪽으로 -355만큼씩 이동하기*/
+        mleft-=2; //mleft = mleft-2   -355, -357, -359, -361,.....
+
+        console.log(mleft);//기존값에 2픽셀씩 더하여 값을 출력해보기
+
+        //만약에 ul태그의 위치가 -357일때 왼쪽 첫번째 li태그를 오른쪽 끝으로 자리를 배치한다.
+        if(mleft==-357){
+          $('.banner ul li:first-child').insertAfter('.banner ul li:last=child');
+        }else if(mleft==-711){
+          mleft=-355;
+        };
+      };
+
+      let Timer = setInterval(moveLeft, 20)
+
+      //ul태그에 마우스 오버시 시간을 제거하여 멈추게하고 다시 마우스 아웃시 시간을 생성하여 움직이게 한다.
+      $('.banner ul').hover(function(){
+        clearInterval(Timer);
+      },function(){
+        clearInterval(Timer);
+        Timer = setInterval(moveLeft,20);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>jquety_DOM_image_slide</h2>
+  <p>7장의 이미지를 사용하여 왼쪽으로 슬라이드되는  애니메이션 구현하기</p>
+  
+  <article class="banner">
+    <ul>
+      <li><a href="#none" title=""><img src="./images02/seoul1.jpg" alt="배너1"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul2.jpg" alt="배너2"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul3.jpg" alt="배너3"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul4.jpg" alt="배너4"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul5.jpg" alt="배너5"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul6.png" alt="배너6"></a></li>
+      <li><a href="#none" title=""><img src="./images02/seoul7.jpg" alt="배너7"></a></li>
+    </ul>
+  </article>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제01</title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    img{
+      margin: 0px auto;
+      display: block;
+    }
+    article{
+      position: relative;
+    }
+    input[type=button]{
+      position: absolute;
+      right: 150px;
+      top:25px;
+      color: #333;
+      background: none;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .banner{
+      position:relative;
+    }
+    .banner div{
+      display: flex;
+      width: 1920px;
+      height: 450px;
+    }
+    .banner ul{
+      box-shadow: 1px 1px 5px rgb(94, 94, 94);
+    }
+    .banner ul li{
+      list-style: none;
+      cursor: pointer;
+    }
+    .banner ul li a img{
+      display: block;
+    }
+    .banner ul li:hover{
+      border: 2px solid #4285f4;
+      margin: -2px;
+      z-index: 999;
+    }
+    .banner ul{
+      position: absolute;
+      top:40px;
+      right: 400px;
+    }
+  </style>
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      
+      let b = $('#close');
+      b.click(function (){
+        $('.t_banner').slideUp();
+      });
+
+      $('.banner nav li a').mouseenter(function(){
+        let url = $(this).attr('alt');
+        console.log(url);
+
+        $('.banner div img').attr('src',url);
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <article class="t_banner">
+    <img src="./images03/coupang_02.jpg" alt="탑배너">
+    <input type="button" value="닫기" id="close">
+  </article>
+
+  <header>
+    <img src="./images03/coupang_03.jpg" alt="내비게이션">
+  </header>
+
+  <maine>
+    <img src="./images03/coupang_04.jpg" alt="검색">
+
+    <article class="banner">
+      <div>
+        <img src="./images03/banner01.jpg" alt="banner01">
+        <img src="./images03/banner02.jpg" alt="banner02">
+        <img src="./images03/banner03.jpg" alt="banner03">
+        <img src="./images03/banner04.png" alt="banner04">
+        <img src="./images03/banner05.jpg" alt="banner05">
+        <img src="./images03/banner06.jpg" alt="banner06">
+      </div>
+      <nav>
+      <ul>
+        <li><a href="#none" title="item01" alt="./images03/banner01.jpg"><img src="./images03/item01.jpg"></a></li>
+        <li><a href="#none" title="item02" alt="./images03/banner02.jpg"><img src="./images03/item02.png"></a></li>
+        <li><a href="#none" title="item03" alt="./images03/banner03.jpg"><img src="./images03/item03.png"></a></li>
+        <li><a href="#none" title="item04" alt="./images03/banner04.png"><img src="./images03/item04.png"></a></li>
+        <li><a href="#none" title="item05" alt="./images03/banner05.jpg"><img src="./images03/item05.jpg"></a></li>
+        <li><a href="#none" title="item06" alt="./images03/banner06.jpg"><img src="./images03/item06.jpg"></a></li>
+      </ul>
+    </nav>
+    </article>
+  </maine>
+</body>
+</html>
