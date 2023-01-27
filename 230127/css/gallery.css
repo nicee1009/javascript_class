@@ -20,7 +20,7 @@ main{
 .gallery{
   width: 1240px;
   margin: 0px auto;
-  border: 3px solid rgb(184, 184, 184);
+  border: 3px solid rgb(0, 0, 0);
 }
 .gallery h2{
   text-align: center;
@@ -29,7 +29,7 @@ main{
 }
 .g_navi{
   height: 50px;
-  border-bottom: 3px solid rgb(126, 122, 122);
+  border-bottom: 3px solid rgb(0, 0, 0);
 }
 .g_navi > ul{
   display: flex;
@@ -40,7 +40,7 @@ main{
 }
 .g_navi > ul > li > a{
   font-size: 14px;
-  background: rgb(126, 122, 122);
+  background: rgb(0, 0, 0);
   color: #fff;
   padding: 4px 14px 5px 14px;
   border-radius: 20px;
@@ -69,7 +69,7 @@ main{
 .g_list > li > a img{
   width: 100%;
   transition: 0.3s;
-  filter: grayscale(0.7);
+  filter: grayscale(1);
 }
 .g_list > li > a:hover img{
   transform: scale(1.1);
