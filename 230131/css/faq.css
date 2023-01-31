@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+ol, ul, li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:#333;
+}
+body{
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color:#333;
+}
+
+.t_color01{
+  color:#006633;
+}
+
+section{
+  width: 1100px;
+  margin: 0px auto;
+  font-size: 16px;
+}
+section > h2{
+  margin-top:10px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 40px;
+}
+fieldset{
+  background: #f4f4f2;
+  text-align: right;
+  line-height: 60px;
+  border: none;
+  margin: 14px 0px;;
+}
+fieldset > legend{
+  display: none;
+}
+fieldset #search{
+  border: none;
+  border: 1px solid #ccc;
+  height: 30px;
+  width:300px;
+}
+fieldset input[type=submit]{
+  background: #777;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 0px 20px 0px 5px;
+  border-radius: 3px;
+  border: none;
+}
+
+/* 질문 답변 서식 */
+.faq{
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.faq > dt::before{
+  content: "Q ";
+  color: #006633;
+}
+.faq > dd::before{
+  content: "A ";
+  font-weight: bold;
+  color: #666;
+}
+.faq > dt{
+  line-height: 60px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+}
+.faq > dt > i.fas{
+  position: absolute;
+  right: 1%;
+  top: 30%;
+  font-size: 26px;
+}
+/* 답변서식 */
+.faq > dd{
+  background-color: #f4f4f2;
+  padding: 26px 15px 20px 20px;
+  text-indent: -20px;
+  display: none;
+}
+/* 제목에 적용되는 컬러 */
+.act01{
+  color: #006633;
+}
+/* 화살표 서식 */
+.act02{
+  transform: rotate(180deg);
+}
+.page{
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.page > li{
+  display: inline-block;
+  padding: 0px 6px;
+}
+.page > li > a{
+  font-size: 14px;
+  font-weight: 500;
+}
+.on{
+  color:#006633 !important;
+  border-bottom: 1px solid #006633 !important;
+}

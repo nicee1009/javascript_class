@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+ol, ul, li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #767676;
+}
+body{
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color:#333;
+}
+.t_color01{
+  color: red;
+}
+
+section{
+  width: 750px;
+  margin: 0px auto;
+  font-size: 14px;
+  padding-top: 60px;
+}
+fieldset{
+  background: #fff;
+  text-align: left;
+  line-height: 30px;
+  border: none;
+  border: 1px solid #640faf;
+  margin: 14px 0px;;
+  border-radius: 50px;
+}
+fieldset > .s_box i.fas{
+  padding-left: 10px;
+  font-size: 14px;
+  color: #640faf;
+}
+fieldset > .s_box legend{
+  display: none;
+}
+fieldset > .s_box #search{
+  border: none;
+}
+fieldset > .s_box input[type=submit]{
+  display: none;
+}
+.title{
+  position: relative;
+  height: 40px;
+  padding-top: 10px;
+}
+.title h2{
+  position: absolute;
+  left: 0px;
+  font-size: 18px;
+}
+.title a{
+  position: absolute;
+  right: 0px;
+  font-size: 12px;
+}
+
+/* 질문 답변 서식 */
+.faq{
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+.num{
+  color: #640faf;
+  font-size: 15px;
+  margin-right: 7px;
+  font-weight: 700;
+}
+.faq > dt{
+  line-height: 40px;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+}
+.faq > dt > i.fas{
+  position: absolute;
+  right: 1%;
+  top: 28%;
+  font-size: 18px;
+}
+/* 답변 서식 */
+.faq > dd{
+  background-color: #fafafa;
+  padding: 10px 0px 10px 15px;
+  border-bottom: 1px solid #ccc;
+  display: none;
+  transform: translateY(1px);
+}
+.faq > dd img{
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
+
+/* 화살표 서식 */
+.act01{
+  transform: rotate(180deg);
+}
