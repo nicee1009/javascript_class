@@ -126,6 +126,7 @@
           $(this).next().slideDown().siblings('dd').slideUp();
         });
 
+        $('.page li a').first().addClass('on');
         $('.page li a').click(function(){
         $(this).addClass('on').parent().siblings().find('a').removeClass('on');
       });

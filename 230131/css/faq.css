@@ -115,6 +115,10 @@ fieldset input[type=submit]{
   font-size: 14px;
   font-weight: 500;
 }
+/* .page > li:first-child > a{
+  color:#006633 ;
+  border-bottom: 1px solid #006633 ;
+} */
 .on{
   color:#006633 !important;
   border-bottom: 1px solid #006633 !important;
