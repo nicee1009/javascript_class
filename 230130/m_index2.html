@@ -6,11 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>에뛰드 모바일 웹 내비게이션</title>
   <link rel="stylesheet" href="./css/main2.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
   <div id="wrap">
     <header>
+      <div class="search-box">
       <i class="fas fa-search"></i>
+      </div>
 
       <h1><a href="m_index2.html" title="메인페이지 바로가기">
         <img src="./images/logo.png" alt="상단로고">
@@ -41,11 +44,11 @@
       <!-- 슬라이드 3장 (좌,우, 페이드인, 아웃, 상, 하)-->
       <section class="s_banner">
         <h2>슬라이드 배너</h2>
-        <ul>
-        <li><a href="#none"><img src="./images/slide01_01.jpg" alt="메인배너01"></a></li>
-        <li><a href="#none"><img src="./images/slide02_02.jpg" alt="메인배너02"></a></li>
-        <li><a href="#none"><img src="./images/slide03_03.jpg" alt="메인배너03"></a></li>
-        </ul>
+          <ul>
+            <li><a href="#none"><img src="./images/slide01_01.jpg" alt="메인배너01"></a></li>
+            <li><a href="#none"><img src="./images/slide02_02.jpg" alt="메인배너02"></a></li>
+            <li><a href="#none"><img src="./images/slide03_03.jpg" alt="메인배너03"></a></li>
+          </ul>
       </section>
     </main>
 
@@ -60,7 +63,7 @@
       $(function(){
 
 
-        //1.토글버튼 변수
+        //1.토글버튼 변수000
         let t_btn = $('#toggle');
         let t_n = 1;
         let slide = $('.s_banner ul');
@@ -111,6 +114,7 @@
             }else{
               num++;
             }
+            slide.css({'margin-left':'0px'})
           });
         }
         
