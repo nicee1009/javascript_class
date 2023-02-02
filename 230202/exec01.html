@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제01</title>
+  <link rel="stylesheet" href="./css/exec01.css" type="text/css">
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      //1.변수선언
+      let t_mnu = $('.tab_mnu li a');
+
+      t_mnu.click(function(e){
+      let on = $('.tab_mnu li').attr('href');
+        e.preventDefault();
+        $(this).addClass('act').parent().siblings().find('a').removeClass('act');
+        $(this).next().show().parent().siblings().find('div').hide();
+
+        t_mnu.each(function(){
+          if($(this).hasClass('act')){
+            let on = $(this).find('img').attr('src').replace('_off','_on');
+            $(this).find('img').attr('src',on);
+          }else{
+            let off = $(this).find('img').attr('src').replace('_on','_off');
+            $(this).find('img').attr('src',off);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <article class="tab_mnu">
+    <h2>테마여행</h2>
+    <ul>
+      <li>
+        <a href="./img/ico_theme_zone_1_on.png" title="테마여행" class="act">
+          <img src="./img/ico_theme_zone_1_on.png" alt="테마여행아이콘">
+          <p>테마여행</p>
+        </a>
+        <div class="con c01">
+          <img src="./img/01.jpg" alt="테마여행이미지">
+        </div>
+      </li>
+      <li>
+        <a href="./img/ico_theme_zone_2_on.png" title="추천일정">
+          <img src="./img/ico_theme_zone_2_off.png" alt="추천일정아이콘">
+          <p>추천일정</p>
+        </a>
+        <div class="con c02">
+          <img src="./img/02.jpg" alt="추천일정 이미지">
+        </div>
+      </li>
+      <li>
+        <a href="./img/ico_theme_zone_3_on.png" title="스크린속 제주">
+          <img src="./img/ico_theme_zone_3_off.png" alt="스크린속 제주아이콘">
+          <p>스크린속 제주</p>
+        </a>
+        <div class="con c01">
+          <img src="./img/03.jpg" alt="스크린속 제주 이미지">
+        </div>
+      </li>
+      <li>
+        <a href="./img/ico_theme_zone_4_on.png" title="교통정보">
+          <img src="./img/ico_theme_zone_4_off.png" alt="교통정보아이콘">
+          <p>교통정보</p>
+        </a>
+        <div class="con c01">
+          <img src="./img/04.jpg" alt="교통정보">
+        </div>
+      </li>   
+      <li>
+        <a href="./img/ico_theme_zone_5_on.png" title="안전 안심관광 가이드">
+          <img src="./img/ico_theme_zone_5_off.png" alt="안전 안심관광 가이드아이콘">
+          <p>안전&middot;안심관광 가이드</p>
+        </a>
+        <div class="con c01">
+          <img src="./img/05.jpg" alt="안전 안심관광 가이드 이미지">
+        </div>
+      </li>
+    </ul>
+  </article>
+
+
+
+  <script>
+
+    //선생님이랑
+    $(function(){
+      //1.변수 선언
+      let tmnu = $('.tab_mnu li');
+
+      tmnu.click(function(){
+        let src = $(this).find('img').attr('src');
+        //console.log(src);
+
+        src = src.replace('_off','_on');
+        console.log(src);
+
+        //a요소에 배경서식 적용
+        $(this).find('a').addClass('on').parent().siblings().find('a').removeClass('on');
+
+        let n = $(this).index();
+        $('.thum li').each(function(i){//li태그에 각각 기능을 삽입한다.
+
+          $(this).find('img').attr('src',$(this).find('img').attr('src').replace('_off','_on'));
+
+          if(n!=1){//만약에 선택한 요소의 인덱스번호가 아니라면 아래 내용을 실행하고
+            $(this).find('img').attr('src',$(this).find('img').attr('src').replace('_on','_off'));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
